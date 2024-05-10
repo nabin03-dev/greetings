@@ -20,7 +20,7 @@ body {
 /* Updated CSS for Time */
 #time {
     font-size: 8vw; /* Adjust font size based on viewport width */
-    color: #1d191b; /* Hot pink color */
+    color: #e72a89; /* Hot pink color */
     font-family: 'Quicksand','Roboto', sans-serif; /* Specify font family */
     font-weight: 400; /* Use bold font weight */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
