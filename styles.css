@@ -1,0 +1,142 @@
+/* Updated CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: black;
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Updated CSS */
+#time {
+    font-size: 8rem;
+    color: #1d191b; /* Hot pink color */
+    font-family: 'Quicksand','Roboto', sans-serif; /* Specify font family */
+    font-weight: 400; /* Use bold font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    animation: pulse 1.5s infinite alternate; /* Add pulse animation */
+  }
+  
+  /* Apply heartbeat animation to clock */
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Style the colon between hours, minutes, and seconds */
+  #time span {
+    color: #0f0c0e; /* Light purple color */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 700px) {
+    #time {
+      font-size: 6rem; /* Decrease font size for smaller screens */
+    }
+  }
+  
+
+h1 {
+  margin-bottom: 3rem;
+  font-size: 2rem; /* Increase font size for headings */
+  color: #333; /* Text color */
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  font-size: 1.5rem; /* Increase font size for subheadings */
+  color: #666; /* Lighter text color */
+}
+
+/* Apply heartbeat animation to greeting */
+/* Updated CSS */
+/* Updated CSS */
+#greeting {
+    font-size: 3rem;
+    color: #ff1493; /* Hot pink color for the heart */
+    opacity: 0; /* Initially hide the text */
+    animation: fadeIn 2s ease-in-out forwards, heartbeat 1s infinite alternate; /* Apply both animations */
+    font-family: 'Cookie', cursive; /* Use Cookie font from Google Fonts */
+  }
+  
+  /* Apply fadeIn animation to greeting */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply heartbeat animation to greeting */
+  @keyframes heartbeat {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  #wrapper {
+	position: absolute;
+	margin-left: 555px;
+	margin-top: 15px;
+	width: 60px !important; /* Set width */
+	height: 60px !important; /* Set height */
+	animation: pulse 1s infinite;
+}
+
+#pulsingheart {
+  position: relative;
+  width: 60px; /* Adjust width */
+  height: 55px; /* Adjust height */
+}
+
+#pulsingheart:before,
+#pulsingheart:after {
+  position: absolute;
+  content: "";
+  left: 30px; /* Adjust position */
+  top: 0;
+  width: 30px; /* Adjust width */
+  height: 45px; /* Adjust height */
+  background: #aa0000;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  animation: pulsecolor 1s infinite;
+}
+
+#pulsingheart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes pulse {
+  10% {
+    transform: scale(1.1)
+  }
+}
+
+@keyframes pulsecolor {
+  10% {
+    background: #dd0000
+  }
+}
