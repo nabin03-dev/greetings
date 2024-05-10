@@ -1,142 +1,127 @@
 /* Updated CSS */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-  color: black;
-  background-color: #f4f4f4; /* Light gray background */
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Ensure body covers the entire viewport height */
+    color: black;
+    background-color: #f4f4f4; /* Light gray background */
 }
 
-/* Updated CSS */
+/* Updated CSS for Time */
 #time {
-    font-size: 8rem;
+    font-size: 8vw; /* Adjust font size based on viewport width */
     color: #1d191b; /* Hot pink color */
     font-family: 'Quicksand','Roboto', sans-serif; /* Specify font family */
     font-weight: 400; /* Use bold font weight */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
     animation: pulse 1.5s infinite alternate; /* Add pulse animation */
-  }
-  
-  /* Apply heartbeat animation to clock */
-  @keyframes pulse {
+}
+
+/* Apply heartbeat animation to clock */
+@keyframes pulse {
     from {
-      transform: scale(1);
+        transform: scale(1);
     }
     to {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  }
-  
-  /* Style the colon between hours, minutes, and seconds */
-  #time span {
-    color: #0f0c0e; /* Light purple color */
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 700px) {
-    #time {
-      font-size: 6rem; /* Decrease font size for smaller screens */
-    }
-  }
-  
-
-h1 {
-  margin-bottom: 3rem;
-  font-size: 2rem; /* Increase font size for headings */
-  color: #333; /* Text color */
 }
 
-h2 {
-  margin-bottom: 0.5rem;
-  opacity: 0.6;
-  font-size: 1.5rem; /* Increase font size for subheadings */
-  color: #666; /* Lighter text color */
-}
-
-/* Apply heartbeat animation to greeting */
-/* Updated CSS */
-/* Updated CSS */
+/* Updated CSS for Greeting */
 #greeting {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #ff1493; /* Hot pink color for the heart */
     opacity: 0; /* Initially hide the text */
     animation: fadeIn 2s ease-in-out forwards, heartbeat 1s infinite alternate; /* Apply both animations */
     font-family: 'Cookie', cursive; /* Use Cookie font from Google Fonts */
-  }
-  
-  /* Apply fadeIn animation to greeting */
-  @keyframes fadeIn {
+}
+
+/* Apply fadeIn animation to greeting */
+@keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  /* Apply heartbeat animation to greeting */
-  @keyframes heartbeat {
+}
+
+/* Apply heartbeat animation to greeting */
+@keyframes heartbeat {
     from {
-      transform: scale(1);
+        transform: scale(1);
     }
     to {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
-  }
-  #wrapper {
-	position: absolute;
-	margin-left: 555px;
-	margin-top: 15px;
-	width: 60px !important; /* Set width */
-	height: 60px !important; /* Set height */
-	animation: pulse 1s infinite;
+}
+
+/* Wrapper and Heart Animation */
+#wrapper {
+    position: absolute;
+    top: 60%; /* Position at the center vertically */
+    left: 40%; /* Position at the center horizontally */
+    animation: pulse 1s infinite;
 }
 
 #pulsingheart {
-  position: relative;
-  width: 60px; /* Adjust width */
-  height: 55px; /* Adjust height */
+    position: relative;
+    width: 100px; /* Adjust width */
+    height: 90px; /* Adjust height */
 }
 
 #pulsingheart:before,
 #pulsingheart:after {
-  position: absolute;
-  content: "";
-  left: 30px; /* Adjust position */
-  top: 0;
-  width: 30px; /* Adjust width */
-  height: 45px; /* Adjust height */
-  background: #aa0000;
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  animation: pulsecolor 1s infinite;
+    position: absolute;
+    content: "";
+    left: 50px; /* Adjust position */
+    top: 0;
+    width: 50px; /* Adjust width */
+    height: 80px; /* Adjust height */
+    background: #aa0000;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    animation: pulsecolor 1s infinite;
 }
 
 #pulsingheart:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
 
 @keyframes pulse {
-  10% {
-    transform: scale(1.1)
-  }
+    10% {
+        transform: scale(1.1);
+    }
 }
 
 @keyframes pulsecolor {
-  10% {
-    background: #dd0000
-  }
+    10% {
+        background: #dd0000;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+    /* Adjust font size for time */
+    #time {
+        font-size: 12vw; /* Decrease font size for smaller screens */
+    }
+
+    /* Adjust margin for wrapper */
+    #wrapper {
+        margin-top: 30px; /* Adjust margin for smaller screens */
+    }
 }
