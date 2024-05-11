@@ -36,23 +36,28 @@ function addZero(n) {
 // Set Background and Greeting with Smooth Transition
 function setBgGreet() {
     let today = new Date(),
-      hour = today.getHours();
-  
+        hour = today.getHours();
+
     if (hour < 12) {
-      // Morning
-      document.body.style.backgroundImage = "url('https://i.ibb.co/7vDLJFb/morning.jpg')";
-      greeting.innerHTML = 'Good Morning, My Love '; // Add heart symbol
+        // Morning
+        document.body.style.backgroundImage = "url('https://i.ibb.co/7vDLJFb/morning.jpg')";
+        greeting.innerHTML = 'Good Morning, My Love '; // Add heart symbol
     } else if (hour < 18) {
-      // Afternoon
-      document.body.style.backgroundImage = "url('https://i.ibb.co/3mThcXc/afternoon.jpg')";
-      greeting.innerHTML = 'Good Afternoon, My Love '; // Add heart symbol
+        // Afternoon
+        document.body.style.backgroundImage = "url('https://i.ibb.co/3mThcXc/afternoon.jpg')";
+        greeting.innerHTML = 'Good Afternoon, My Love '; // Add heart symbol
+    } else if (hour < 21) {
+        // Evening
+        document.body.style.backgroundImage = "url('https://i.ibb.co/924T2Wv/night.jpg')";
+        greeting.innerHTML = 'Good Evening, My Love '; // Add heart symbol
+        document.body.style.color = 'white';
     } else {
-      // Evening
-      document.body.style.backgroundImage = "url('https://i.ibb.co/924T2Wv/night.jpg')";
-      greeting.innerHTML = 'Good Evening, My Love '; // Add heart symbol
-      document.body.style.color = 'white';
+        // Night
+        document.body.style.backgroundImage = "url('https://i.ibb.co/924T2Wv/night.jpg')";
+        greeting.innerHTML = 'Good Night, My Love '; // Add heart symbol
+        document.body.style.color = 'white';
     }
-    
+
     // Smooth Transition
     greeting.style.opacity = 1; // Ensure opacity is set to 1
   }
